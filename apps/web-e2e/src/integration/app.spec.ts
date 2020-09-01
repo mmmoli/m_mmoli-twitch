@@ -1,13 +1,21 @@
-import { getGreeting } from '../support/app.po';
-
 describe('web', () => {
-  beforeEach(() => cy.visit('/'));
+  describe('Styles', () => {
+    beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+    it('should use custom fonts', () => {
+      cy.get('body').should('have.css', 'font-family', 'rgb(217,217,217)');
+    });
+  });
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to web!');
+  describe('Home', () => {
+    beforeEach(() => cy.visit('/'));
+
+    it('should display a heading', () => {
+      cy.findAllByText(/hi/i).should('exist');
+    });
+
+    it('should do someting else', () => {
+      cy.findAllByText(/hi/i).should('exist');
+    });
   });
 });

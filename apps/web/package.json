@@ -1,10 +1,19 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "web",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
     "gatsby": "*"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "tailwind.config.js",
+      "preset": "emotion",
+      "debugProp": true,
+      "debugPlugins": false,
+      "debug": false
+    }
   }
 }

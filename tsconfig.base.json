@@ -15,7 +15,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@m-mmoli-twitch/theme": ["libs/theme/src/index.js"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
